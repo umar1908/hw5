@@ -31,6 +31,7 @@ int main(){
   locale cp1251=gen("ru_RU.CP1251");
   locale utf8=gen("ru_RU.UTF-8");
   locale utf32=gen("ru_RU.UTF-32");
+  //Я работал из-под linux поэтому для соответствия заданию вначале перегоняю родную кодировку unf-8 в cp1251
   string string_in_cp1251=boost::locale::conv::from_utf(a,cp1251);
   cout<<"Исходная строка в кодировке CP1251: "<<string_in_cp1251;
   string string_in_utf8=boost::locale::conv::between(string_in_cp1251, "UTF-8", "CP1251");
